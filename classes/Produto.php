@@ -1,0 +1,31 @@
+<?php
+class Produto
+{
+    private $descricao;
+    private $estoque;
+    private $preco;
+    private $fabricante;
+
+    public function __construct($descricao, $estoque, $preco)
+    {
+        $this->descricao = $descricao;
+        $this->estoque = $estoque;
+        $this->preco = $preco;
+    }
+
+    public function getDescricao()
+    {
+        return $this->descricao;
+    }
+
+    // Esse método recebe o fabricante da classe Fabricante.php e armazena na propriedade do produto
+    public function setFabricante(Fabricante $f)
+    {
+        $this->fabricante = $f;
+    }
+
+    public function getFabricante()
+    {
+        return $this->fabricante;
+    }
+}
