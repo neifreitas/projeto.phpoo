@@ -6,8 +6,7 @@ $produto['preco'] = 7;
 
 $objeto = new stdClass;
 
-foreach($produto as $chave => $valor)
-{
+foreach($produto as $chave => $valor){
     $objeto->$chave = $valor;
 }
 

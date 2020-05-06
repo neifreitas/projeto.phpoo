@@ -8,8 +8,7 @@ class Produto
 
     public function setDescricao($descricao)
     {
-        if(is_string($descricao))
-        {
+        if(is_string($descricao)){
             $this->descricao = $descricao;
         }
     }
@@ -21,8 +20,7 @@ class Produto
 
     public function setEstoque($estoque)
     {
-        if(is_numeric($estoque))
-        {
+        if(is_numeric($estoque)){
             $this->estoque = $estoque;
         }
     }
@@ -34,8 +32,7 @@ class Produto
 
     public function setPreco($preco)
     {
-        if(is_numeric($preco) AND $preco > 0)
-        {
+        if(is_numeric($preco) AND $preco > 0){
             $this->preco = $preco;
         }
     }
@@ -47,24 +44,21 @@ class Produto
 
     public function aumentarEstoque($unidades)
     {
-        if(is_numeric($unidades) AND $unidades > 0)
-        {
+        if(is_numeric($unidades) AND $unidades > 0){
             $this->estoque += $unidades;
         }
     }
 
     public function diminuirEstoque($unidades)
     {
-        if(is_numeric($unidades) AND $unidades > 0)
-        {
+        if(is_numeric($unidades) AND $unidades > 0){
             $this->estoque -= $unidades;
         }
     }
 
     public function reajustarPreco($percentual)
     {
-        if(is_numeric($percentual) AND $percentual >= 0)
-        {
+        if(is_numeric($percentual) AND $percentual >= 0){
             $this->preco *= (1 + ($percentual / 100));
         }
     }

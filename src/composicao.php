@@ -12,7 +12,6 @@ $p1->addCaracteristica('Potencia', '20 watts RMS');
 
 // Exibindo o objeto
 print 'Produto: ' . $p1->getDescricao() . "<br>\n";
-foreach($p1->getCaracteristicas() as $c)
-{
+foreach($p1->getCaracteristicas() as $c){
     print ' - Caracteristicas: ' . $c->getNome() . " - " . $c->getValor() . "<br>\n";
 }
