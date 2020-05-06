@@ -10,7 +10,8 @@ class ContaCorrente extends Conta
         $this->limite = $limite;
     }
 
-    public function retirar($quantia)
+    // Método final: um método final não pode ser sobrescrito em uma eventual classe filha
+    public final function retirar($quantia)
     {
         if (($this->saldo + $this->limite) >= $quantia) {
             $this->saldo -= $quantia; //Retirada permitida

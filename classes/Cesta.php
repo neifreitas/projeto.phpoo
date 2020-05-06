@@ -1,6 +1,8 @@
 <?php
 class Cesta
 {
+    // Atributo declarado como private pode ser alterado somente de dentro da
+    // classe (recomendável).
     private $time;
     private $itens;
 

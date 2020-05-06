@@ -1,6 +1,12 @@
 <?php
-class Conta
+
+// Esta é uma classe abstrata (superclasse), ou seja, ela não pode ser instanciada diretamente
+// Ela é a base das classes ContaCorrente e ContaPoupanca
+
+abstract class Conta
 {
+    // Atributo declarado como protected pode ser alterado somente de dentro da
+    // classe (recomendável) ou pelas classes filhas.
     protected $agencia;
     protected $conta;
     protected $saldo;
@@ -31,4 +37,8 @@ class Conta
     {
         return $this->saldo;
     }
+
+    // Método abstrato: neste caso a implementação do código deve ser feita
+    // na classe filha. Se o método não for implementado um erro é exibido 
+    abstract function retirar($quantia);
 }

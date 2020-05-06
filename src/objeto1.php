@@ -2,6 +2,8 @@
 # Classe V1 - com propriedades públicas e sem métodos
 class Produto
 {
+    // Atributo declarado como public pode ser alterado de fora ou de dentro de
+    // uma classe (pouco recomendável).
     public $descricao;
     public $estoque;
     public $preco;
