@@ -1,7 +1,6 @@
 <?php
 require_once '../classes/Orcamento.php';
 require_once '../classes/Produto.php';
-require_once '../classes/OrcavelInterface.php';
 
 $o = new Orcamento;
 $o->adiciona(new Produto('Máquina de café', 10, 299), 1);
