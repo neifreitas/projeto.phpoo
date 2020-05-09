@@ -10,7 +10,7 @@ function lista_combo_cidades($id = null)
     if($result){
         while($row = mysqli_fetch_assoc($result)){
             $check = ($row['id'] == $id) ? 'selected=1' : '';
-            $output .= "<option $check value='{row[id]}'>{$row['nome']}</option>";
+            $output .= "<option $check value='{$row[id]}'>{$row['nome']}</option>";
         }
     }
     mysqli_close($conn);
