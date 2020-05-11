@@ -9,6 +9,12 @@
 <body>
     <?php
     $conn = mysqli_connect('localhost', 'root', '', 'livro');
+    
+    if(!empty($_GET['action']) AND $_GET['action'] == 'delete'){
+        $id = (int) $_GET['id'];
+        $result = mysqli_query($conn, "DELETE FROM pessoa WHERE id='{$id}'");
+    }
+    
     $result = mysqli_query($conn, "SELECT * FROM pessoa ORDER BY id");
 
     // Monta o cabeçalho da tabela
@@ -38,7 +44,7 @@
                 <img src='images/edit.svg' style='width:17px'>
                 </a></td>";
         print "<td align='center'>
-                <a href='pessoa_delete.php?id={$id}'>
+                <a href='pessoa_list.php?action=delete&id={$id}'>
                 <img src='images/remove.svg' style='width:17px'>
                 </a></td>";
         print "<td>{$id}</td>";
